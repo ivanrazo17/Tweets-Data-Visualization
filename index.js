@@ -14,13 +14,15 @@ dateElement.innerHTML = currentDate.toLocaleDateString("en-US", dateOptions);
 
 
 
-const url = 'https://twitter-api45.p.rapidapi.com/search.php?query=cybertruck&search_type=Top';
+const url = "https://twitter-trends5.p.rapidapi.com/twitter/request.php";
 const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '4f4dbc6de6msh1f54c3cc7cc0f29p19d6cfjsna3ced6e954c7',
-		'x-rapidapi-host': 'twitter-api45.p.rapidapi.com'
-	}
+  method: "POST",
+  headers: {
+    'content-type': 'application/x-www-form-urlencoded',
+	'X-RapidAPI-Key': '4f4dbc6de6msh1f54c3cc7cc0f29p19d6cfjsna3ced6e954c7',
+	'X-RapidAPI-Host': 'twitter-trends5.p.rapidapi.com'
+  },
+  body: new URLSearchParams({ woeid: "23424934" }),
 };
 
 
